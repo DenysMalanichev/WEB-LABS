@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta name="author" content="Denys Malanichev"> 
+		<meta charset="UTF-8">
+		<title>Сайт-звіт</title> 
+		<link rel="stylesheet" href="../styles/style.css">		
+	</head>
+	<body>
+		<header>
+			<a  href="lab1.html">Лаб1</a>
+            <a class="active" href="lab2.html">Лаб2</a>
+            <a href="lab3.html">Лаб3</a>
+            <a href="lab4.html">Лаб4</a>
+            <a href="lab5.html">Лаб5</a>
+            <a href="#lab6">Лаб6</a>
+            <a href="#lab7">Лаб7</a>
+            <a href="#lab8">Лаб8</a>
+            <a href="#lab9">Лаб9</a>
+            <a href="../zvit/zvit.html">Головна</a>
+            <div class="header-right">
+                <a class="name">Сайт-звіт Маланічева Д.А. ІС-13 варіант 10</a>
+            </div>
+		</header>
+		<main>
+            <div class="lab_right_column">
+                <div id="opys_div" class="card">
+                    <h2 class="caption">Постановка задачі</h2>
+                    <p>Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ.
+                        СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-
+                        ДОКУМЕНТАХ.</p>
+
+                    <p>Мета: придбати практичні навички роботи з селекторами, ідентифікаторами,
+                        списками, різноманітними властивостями кольору і фону, зовнішними
+                        та внутрішними відступами, плаваючими елементами, оформленням
+                        текстових елементів</p>
+                    <p>1. У програмному коді лабораторної работи №2 застосувати селектори тегу
+                        і класу на свій розсуд. Вміти пояснити викладачу. Програмний код
+                        даного пункту відобразити у звітному HTML-документі</p>
+                    <p>2. У програмному коду лабораторної роботи №2 застосувати
+                        ідентифікатори. Вміти пояснити викладачу. Програмний код даного
+                        пункту відобразити у звітному HTML-документі.</p>
+                    <p>3. На свій розсуд застосувати сусідні, дочірні селектори, селектор атрибута
+                        та універсальний селектор. Програмні коди даного пункту відобразити у
+                        звітному HTML-документі.</p>
+                    <p>4. За допомогою каскадних таблиць стилів виконати на свій розсуд стильове
+                        оформлення текстових елементів. Показати як оформлюються:</p>
+                    <pre>
+                        ⎯ списки,
+                        ⎯ різноманітні властивості кольору і фону,
+                        ⎯ зовнішні та внутрішні відступи.</pre>
+                    <p>Програмні коди даного пункту відобразити у звітному HTML-документі.
+                        5. У звітному HTML-документі оформити звіт лабораторної роботи №2</p>
+                </div>
+                <div id="selector_div" class="card" style="display: none;">
+                    <h2 class="caption">Приклад використання селектору тегу і класу</h2>
+                    <h3 class="caption">Загальний селектор</h3>
+                    <xmp>
+                        * {
+                            box-sizing: border-box;
+                        }
+                    </xmp>
+                    <h3 class="caption">Селектор тегу</h3>
+                    <xmp>                        
+                        a{
+                            color: #DC9B3C;
+                        }                        
+                        header a:hover {
+                            background-color: orange;
+                            color: black;
+                        }
+                        header a.active {
+                            background-color: #DC9B3C;
+                            color: white;
+                        }                    
+                    </xmp>
+                    <h3 class="caption">Cелектор класу</h3>
+                    <xmp>
+                        .log_links{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-around;
+                            margin-top: 6%;
+                        }
+                    </xmp>
+                </div>
+                <div id="ids_div" class="card" style="display: none;">
+                    <h2 class="caption">Приклад використання ідентифікаторів</h2>
+                    <h1 id="myHeader">My Header</h1>
+                    <xmp>
+                        <h1 id="myHeader">My Header</h1>
+                        #myHeader{
+                            color: blueviolet;
+                        }
+                    </xmp>
+                </div>
+                <div id="lists_div" class="card" style="display: none;">
+                    <h2 class="caption">Стилі для списків</h2>                    
+                    <ul>
+                        <li class="rhomb">Розділ 1</li>
+                        <ul>
+                            <li class="square">Тема 1</li>
+                            <ul>
+                                <li class="dot">Сторінка 1</li>
+                                <li class="dot">Сторінка 2</li>
+                            </ul>  
+                        </ul>                        
+                        <ol>
+                            <li class="oneone">Тема 2</li>
+                            <li class="onetwo">Тема 3</li>
+                        </ol>
+                    </ul>
+                </div>
+                <div id="indent_div" class="card" style="display: none;">
+                    <h2 class="caption">Відступи</h2>     
+                    <h3 class="caption">Зовнішні відступи</h3>                
+                    <p>Параграф</p>
+                    <p style="margin: 35px;">Параграф з відступом</p>
+                    <p>Параграф</p>
+                    <xmp>
+                        p.marg {
+                            margin: 35px;
+                          }
+                    </xmp>
+                    <h3 class="caption">Внутрішні відступи</h3>    
+                    <p style="border: 1px solid blue; padding: 35px;"> Це параграф з внутрішнім відступом</p>
+                    <xmp>
+                        p.pad {
+                            border: 1px solid red; 
+                            padding: 35px;
+                          }
+                    </xmp>
+                </div>
+                <div id="swim_div" class="card" style="display: none;">
+                    <h2 class="caption">Плаваючі елементи</h2>
+                    <div style="height: 350px; padding: 20px;border: 1px solid black;">
+                        <div style="float: left; height: 150px; width:120px; border: 1px solid black; background: blue;"></div>
+                        <div style="float: left; height:100px; width:120px; border: 1px solid black; background: red;"></div>
+                        <div style="height: 200px; border: 1px solid black; background: orange;"></div>
+                    </div>  
+                    <xmp>
+                        <div style="height: 350px; padding: 20px;border: 1px solid black;">
+                            <div style="float: left; height: 150px; width:120px; border: 1px solid black; background: blue;"></div>
+                            <div style="float: left; height:100px; width:120px; border: 1px solid black; background: red;"></div>
+                            <div style="height: 200px; border: 1px solid black; background: orange;"></div>
+                        </div> 
+                    </xmp>
+                </div>
+            </div>
+            <div class="lab_left_column">
+                <div class="card lab_links">
+                    <button class="vote b_links" onclick="hideSelector(0)">Постановка задачі</button>
+                    <button class="vote b_links" onclick="hideSelector(1)">Списки</button>
+                    <button class="vote b_links" onclick="hideSelector(2)">Ідентифікатори</button>
+                    <button class="vote b_links" onclick="hideSelector(3)">Відступи</button>
+                    <button class="vote b_links" onclick="hideSelector(4)">Плаваючі елементи</button>
+                    <button class="vote b_links" onclick="hideSelector(5)">Селектори</button>
+                </div>
+            </div>
+            <script>
+                function hideSelector(num) {
+                    divs = ["opys_div", "lists_div", "ids_div", "indent_div", "swim_div", "selector_div" ];
+                    var x = document.getElementById(divs[num]);                    
+                    x.style.display = "block";
+                    for (let i = 0; i < 6; i++) {
+                        if(i != num){
+                            var y = document.getElementById(divs[i]);
+                                y.style.display = "none";
+                        }                        
+                    }
+                }
+                </script>
+		</main>
+	</body>

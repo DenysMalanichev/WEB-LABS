@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta name="author" content="Denys Malanichev"> 
+		<meta charset="UTF-8">
+		<title>Сайт-звіт</title> 
+		<link rel="stylesheet" href="../styles/style.css">	
+        <link rel="stylesheet" href="../styles/jquery-ui.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <script src='../js/unitegallery/js/unitegallery.min.js' type='text/javascript'  ></script>
+		<link  href='../js/unitegallery/css/unite-gallery.css' rel='stylesheet' type='text/css' />
+				
+		<!-- include Unite Gallery Theme Files -->
+				
+		<script src='../js/unitegallery/themes/tiles/ug-theme-tiles.js' type='text/javascript'></script>
+
+	</head>
+	<body>
+		<header>
+			<a  href="lab1.html">Лаб1</a>
+            <a href="lab2.html">Лаб2</a>
+            <a href="lab3.html">Лаб3</a>
+            <a href="lab4.html">Лаб4</a>
+			<a href="lab5.html">Лаб5</a>
+            <a href="#lab6">Лаб6</a>
+            <a href="#lab7">Лаб7</a>
+            <a href="#lab8">Лаб8</a>
+            <a href="#lab9">Лаб9</a>
+            <a href="../zvit/zvit.html">Головна</a>
+            <div class="header-right">
+                <a class="name">Сайт-звіт Маланічева Д.А. ІС-13 варіант 10</a>
+            </div>
+		</header>
+		<main>
+                <div class="card" id="photogal_div">
+                    <h2>Photogallery</h2>
+                    <div id="gallery">                          		
+                            <img alt="Image 1 Title" src="../pictures/images/thumbs/thumb1.jpg"
+                                data-image="../pictures/images/big/image1.jpg"
+                                data-description="Image 1 Description">
+                            <img alt="Image 2 Title" src="../pictures/images/thumbs/thumb2.jpg"
+                                data-image="../pictures/images/big/image2.jpg"
+                                data-description="Image 2 Description">
+                            <img alt="Image 3 Title" src="../pictures/images/thumbs/thumb3.jpg"
+                                data-image="../pictures/images/big/image3.jpg"
+                                data-description="Image 3 Description">
+                            <img alt="Image 4 Title" src="../pictures/images/thumbs/thumb4.jpg"
+                                data-image="../pictures/images/big/image4.jpg"
+                                data-description="Image 4 Description">                  
+                    </div>     
+                    <script type='text/javascript'>				
+                        jQuery(document).ready(function(){                            
+                            jQuery("#gallery").unitegallery({
+                                gallery_theme: "tiles"
+                            });
+                        });
+                    </script>                   
+                </div>
+		</main>
+	</body>

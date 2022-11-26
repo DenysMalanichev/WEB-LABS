@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta name="author" content="Denys Malanichev"> 
+		<meta charset="UTF-8">
+		<title>AskNow - створити опитування</title> 
+		<link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            //datepicker
+            $( function() {
+                $( "#datepicker" ).datepicker();
+            } );
+        </script>		
+	</head>
+	<body>
+		<header>
+				<a href="main_page.html" class="logo">AskNow</a>
+				<div class="header-right">
+					<a class="active" href="log_page.html">Увійти</a>
+					<a href="opys_pred_ob.html">ОПО</a>
+					<a href="https://en.wikipedia.org/wiki/FAQ">FAQ</a>					
+				</div>			
+		</header>
+		<main>		            
+			<div class="left_column">
+                <h2 class="caption">Створити нове опитування</h2>	
+                <div class="card">
+                    <form>
+                        <p>
+                            <label for="poll_desc_textarea">
+                                <h2>Опис опитування:</h2>
+                            </label>
+                        </p>
+                        <label for="fname">Назва опитування:</label><br>
+                        <input type="text" id="fname" name="fname" placeholder="Назва"><br>
+                        <br>                        
+                        <textarea id="poll_desc_textarea" name="poll_desc_textarea" rows="6" cols="80" placeholder="Це опитування про..."></textarea>
+                        <br>
+                        <p>Дата, до якої опитування буде відкрите: <input type="text" id="datepicker"></p>
+
+                        <input type="submit" value="Submit" class="button">
+                    </form>				    
+                </div>
+			</div>
+			<div class="right_column">
+				<div class="card">
+					<h2>Інструменти</h2>
+					<div style="display: flex; justify-content: space-between; flex-direction: column;">
+						<a href="#create_poll" class="button" style="margin-bottom: 2%;">Створити опитування</a>
+						<a href="#user_polls" class="button">Мої опитування</a>
+					</div>
+				</div>
+			</div>		
+		</main>
+		<footer>
+			<p>© AskNow 2022</p>
+		</footer>
+	</body>
+</html>

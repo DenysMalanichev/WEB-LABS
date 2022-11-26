@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    </style>
+<html lang="uk">
+	<head>
+		<meta name="author" content="Denys Malanichev"> 
+		<meta charset="UTF-8">
+		<title>Сайт-звіт</title> 
+		<link rel="stylesheet" href="../styles/style.css">		
+	</head>
+	<body>
+		<header>
+			<a href="lab1.html">Лаб1</a>
+            <a href="lab2.html">Лаб2</a>
+            <a href="lab3.html">Лаб3</a>
+            <a class="active" href="lab4.html">Лаб4</a>
+            <a href="lab5.html">Лаб5</a>
+            <a href="#lab6">Лаб6</a>
+            <a href="#lab7">Лаб7</a>
+            <a href="#lab8">Лаб8</a>
+            <a href="#lab9">Лаб9</a>
+            <a href="../zvit/zvit.html">Головна</a>
+            <div class="header-right">
+                <a class="name">Сайт-звіт Маланічева Д.А. ІС-13 варіант 10</a>
+            </div>
+		</header>
+		<main>
+            <div class="lab_right_column">
+                <div id="opys_div" class="card">
+                    <h2 class="caption">ЛАБОРАТОРНА РОБОТА №4</h2>					
+					<h3>Тема: ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ.
+                        КЛАСИ,ОБ’ЄКТИ, ФУНКЦІЇ, В МОВІ JAVASCRIPT. ПОДІЇ ТА ОБРОБКА ПОДІЙ.
+                        ПРОГРАМНА ВЗАЄМОДІЯ З HTML ДОКУМЕНТАМИ НА ОСНОВІ DOM АРІ</h3>
+					<h3>Мета: придбати практичні навички роботи маніпулювання інформаційним
+                        вмістом Web-документа засобами мови JavaScript</h3>					
+                </div>
+                <div id="sort_array_div" class="card" style="display: none;">
+                    <h2 class="caption">Сортування масиву в JS</h2>
+                    <form>
+                        <label for="ArrayLen">Введіть кількість елеметів масиву</label>
+                        <input type="number" id="ArrayLen" value="20">
+                        <button type="button" onclick="generateArray()">Згенерувати та відсортувати</button>
+                    </form>
+                    <p id="row_Array"></p>
+                    <p id="min_in_Array"></p>
+                    <p id="min_start_Array"></p>
+                    <p id="sorted_Array"></p>
+                    <xmp>
+                        function generateArray(){
+                            var arr = [];
+                            for (let i = 0; i < document.getElementById("ArrayLen").value; i++) {
+                                arr.push(getRandomInt(100));
+                            }
+                            document.getElementById("row_Array").textContent = "Не відсортований масив: " + arr;
+                            var min = Math.min.apply(null, arr);
+                            var minIndex = arr.indexOf(min);                   
+                            document.getElementById("min_in_Array").textContent = "Найменший елемет в масиві: " + min;
+                            arr.splice(minIndex, 1);
+                            arr.unshift(min);
+                            document.getElementById("min_start_Array").textContent = "Наймеший елемент на початку: " + arr;
+                            arr = sort(arr);
+                            document.getElementById("sorted_Array").textContent = "Відсортоваий масив: " + arr;                    
+                        }
+        
+                        function getRandomInt(max) {
+                            return Math.floor(Math.random() * max);
+                        }
+                        function sort(list) {
+                            for (let i = 0; i < list.length - 1; i++) {
+                                let min = i;
+                                for (let j = i + 1; j < list.length; j++) {
+                                if (list[j] < list[min]) {
+                                    min = j;
+                                }
+                                }
+                                [list[i], list[min]] = [list[min], list[i]];
+                            }
+                            return list;
+                        }
+                    </xmp>
+                </div>	
+                <div id="popup_hint_div" class="card" style="display: none;">
+                    <h2 class="caption">Візуальний елемент «Спливаюча підказка»</h2>
+                    <div id="tooltip_p" class="tooltip">Це текст зі спливаючою підказкою!
+                        <span class="tooltiptext">Підказка</span>                        
+                    </div>
+                    <xmp>
+                        <div id="tooltip_p" class="tooltip">Це текст зі спливаючою підказкою!
+                            <span class="tooltiptext">Підказка</span>                        
+                        </div>
+                        .tooltip {
+                            position: relative;
+                            display: inline-block;
+                          }
+                          
+                          .tooltip .tooltiptext {
+                            visibility: hidden;
+                            width: 120px;
+                            background-color: #555;
+                            color: #fff;
+                            text-align: center;
+                            border-radius: 6px;
+                            padding: 5px 0;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 125%;
+                            left: 50%;
+                            margin-left: -60px;
+                            opacity: 0;
+                            transition: opacity 0.3s;
+                          }
+                          
+                          .tooltip .tooltiptext::after {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            margin-left: -5px;
+                            border-width: 5px;
+                            border-style: solid;
+                            border-color: #555 transparent transparent transparent;
+                          }
+                          
+                          .tooltip:hover .tooltiptext {
+                            visibility: visible;
+                            opacity: 1;
+                          }
+                          
+                          function addTooltip(id, text, tooltip_text){
+                            document.getElementById(id).innerHTML = 
+                            "<div id=\"tooltip_p\" class=\"tooltip\">" + text 
+                                + "<span class=\"tooltiptext\>" 
+                                    + tooltip_text + "</span></div>\"";                    
+                        }
+                    </xmp>
+                </div>			
+            </div>
+            <div class="lab_left_column">
+                <div class="card lab_links">
+                    <button class="vote b_links" onclick="hideSelector(0)">Опис роботи</button>
+                    <button class="vote b_links" onclick="hideSelector(1)">Сортування масиву в JS</button>
+                    <button class="vote b_links" onclick="hideSelector(2)">Візуальний елемент «Спливаюча підказка»</button>                    
+                </div>
+            </div>
+            <script>
+                function hideSelector(num) {
+                    divs = ["opys_div", "sort_array_div", "popup_hint_div"];
+                    var x = document.getElementById(divs[num]);                    
+                    x.style.display = "block";
+                    for (let i = 0; i < 6; i++) {
+                        if(i != num){
+                            var y = document.getElementById(divs[i]);
+                                y.style.display = "none";
+                        }                        
+                    }
+                }
+
+                function generateArray(){
+                    var arr = [];
+                    for (let i = 0; i < document.getElementById("ArrayLen").value; i++) {
+                        arr.push(getRandomInt(100));
+                    }
+                    document.getElementById("row_Array").textContent = "Не відсортований масив: " + arr;
+                    var min = Math.min.apply(null, arr);
+                    var minIndex = arr.indexOf(min);                   
+                    document.getElementById("min_in_Array").textContent = "Найменший елемет в масиві: " + min;
+                    arr.splice(minIndex, 1);
+                    arr.unshift(min);
+                    document.getElementById("min_start_Array").textContent = "Наймеший елемент на початку: " + arr;
+                    arr = sort(arr);
+                    document.getElementById("sorted_Array").textContent = "Відсортоваий масив: " + arr;                    
+                }
+
+                function getRandomInt(max) {
+                    return Math.floor(Math.random() * max);
+                }
+                function sort(list) {
+                    for (let i = 0; i < list.length - 1; i++) {
+                        let min = i;
+                        for (let j = i + 1; j < list.length; j++) {
+                        if (list[j] < list[min]) {
+                            min = j;
+                        }
+                        }
+                        [list[i], list[min]] = [list[min], list[i]];
+                    }
+                    return list;
+                }
+                function addTooltip(id, text, tooltip_text){
+                    document.getElementById(id).innerHTML = 
+                    "<div id=\"tooltip_p\" class=\"tooltip\">" + text 
+                        + "<span class=\"tooltiptext\>" 
+                            + tooltip_text + "</span></div>\"";                    
+                }
+                </script>
+		</main>
+	</body>

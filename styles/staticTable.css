@@ -1,0 +1,24 @@
+table{
+    width: 1700px;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+table, tr, td{
+    border: 1px solid black;
+}
+.left{
+    background-color: orange;
+    width: 150px;
+    height: 900px;
+}
+.down{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+.top{
+    background-color: blue;
+    width: 700px;
+    height: 100px;
+}

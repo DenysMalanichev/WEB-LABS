@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+.header{
+    background-color: blue;
+    width: 1920px;
+    height: 100px;
+}
+.main{
+    height: 800px;
+    display: flex;
+}
+.left{
+    background-color: orange;
+    width: 600px;   
+    height: 800px; 
+}
+.middle{
+    background-color: white;
+    width: 720px; 
+}
+.right{
+    background-color: orange;
+    width: 600px;   
+    height: 800px;
+}
+.fotter{
+    background-color: blue;
+    width: 1920px;
+    height: 65px;
+}

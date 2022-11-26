@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta name="author" content="Denys Malanichev"> 
+		<meta charset="UTF-8">
+		<title>Сайт-звіт</title> 
+		<link rel="stylesheet" href="../styles/style.css">		
+	</head>
+	<body>
+		<header>
+			<a class="active" href="lab1.html">Лаб1</a>
+            <a href="lab2.html">Лаб2</a>
+            <a href="lab3.html">Лаб3</a>
+            <a href="lab4.html">Лаб4</a>
+			<a href="lab5.html">Лаб5</a>
+            <a href="#lab6">Лаб6</a>
+            <a href="#lab7">Лаб7</a>
+            <a href="#lab8">Лаб8</a>
+            <a href="#lab9">Лаб9</a>
+            <a href="../zvit/zvit.html">Головна</a>
+            <div class="header-right">
+                <a class="name">Сайт-звіт Маланічева Д.А. ІС-13 варіант 10</a>
+            </div>
+		</header>
+		<main>
+            <div class="lab_right_column">
+                <div id="opys_div" class="card">
+                    <h2 class="caption">Загальний опис</h2>					
+					<h3>Об'єктом дослідження є: робота системи онлайн опитування</h3>
+					<h3>Предметом дослідження є: огляд існуючих сайтів і додатків онлайн опитувань</h3>
+					<h3>Бізнес логіка</h3>
+					<ul>Користувач            
+						<li>Реєстрація</li>
+						<li>Авторизація</li>  
+						<br>          
+						<ul>Авторизований користувач
+							<li>Cтворення власних опитувань</li>
+							<li>Голосування в опитуваннях</li>
+							<li>Редагування власних опитувань</li>
+						</ul>
+						<br>
+						<ul>Неавторизований користувач
+							<li>Перегляд відкритих опитувань</li>
+							<li>Голосування в опитуваннях</li>
+						</ul>
+					</ul>
+					<ul>Адміністратор
+						<br>
+						<li>Видалення опитувань</li>
+						<li>Модерація опитувань</li>              
+					</ul>
+                </div>
+				<div id="tema_div" class="card" style="display: none;">
+					<h2 class="caption">Тема</h2>			
+					<p>Темою сайту є система електронного опитування. </p>
+					<h2 class="caption">Мета</h2>			
+					<p> Метою цієї роботи є розробка зручної системи голосування, яка 
+						в майбутньому може бути інтегрована в будь-який проект. Вона 
+						полегшить прийняття рішень виликим колективом, чи навіть 
+						невеликій компанії друзів.
+					</p>
+					<a href="#link">Посилання на проект</a>
+				</div>
+                <div id="table_div" class="card" style="display: none;">
+					<h2 class="caption">HTML-код таблиць</h2>
+					<table style="width:100%; border:1px solid black;">
+						<tr style="border:1px solid black;">
+						  <th style="border:1px solid black;">Клієнт</th>
+						  <th style="border:1px solid black;">Споживач</th>
+						  <th style="border:1px solid black;">Автор</th>
+						</tr>
+						<tr style="border:1px solid black;">
+						  <td style="border:1px solid black;">10</td>
+						  <td style="border:1px solid black;">1000145</td>
+						  <td style="border:1px solid black;">12657</td>
+						</tr>
+						<tr tyle="border:1px solid black;">
+						  <td style="border:1px solid black;">Валерій</td>
+						  <td style="border:1px solid black;">Дмитро</td>
+						  <td style="border:1px solid black;">Анна</td>
+						</tr>
+					  </table>	
+					<xmp>
+						<table>
+							<tr>
+							  <th>Клієнт</th>
+							  <th>Споживач</th>
+							  <th>Автор</th>
+							</tr>
+							<tr>
+							  <td>10</td>
+							  <td>1000145</td>
+							  <td>12657</td>
+							</tr>
+							<tr>
+							  <td>Валерій</td>
+							  <td>Дмитро</td>
+							  <td>Анна</td>
+							</tr>
+						  </table>	
+					</xmp>
+				</div>
+				<div id="form_div" class="card" style="display: none;">
+					<h2 class="caption">HTML-код форми</h2>		
+					<div class="frame">
+						<h2 style="margin-top: 5%; text-align: center;">Реєстрація</h2>
+						<form>
+							<label for="f_email" class="enter_data">Пош. адреса:</label>
+							<input type="email" placeholder="email@examp.com" name="f_email" class="input_field"> <br>
+							<label for="f_pass" class="enter_data">Пароль:</label>
+							<input type="text" placeholder="password" name="f_pass" class="input_field" style="margin-left: 12.5%;"> <br>
+							<label for="f_pass" class="enter_data">Повт. пароль:</label>
+							<input type="text" placeholder="repeat password" name="f_pass_check" class="input_field" style="margin-left: 4.1%;"> <br><br>
+							<div>
+								<a style="margin-left: 10%; margin-top: 10%;" href="log_page.html" target="_self">Вже є акаунт</a>
+								<input type="submit" value="Продовжити" id="submit" style="margin-left: 40%;">			
+							</div>
+						</form>
+					</div>
+					<xmp>
+						<form>
+							<label for="f_email" class="enter_data">Пош. адреса:</label>
+							<input type="email" placeholder="email@examp.com" name="f_email" class="input_field"> <br>
+							<label for="f_pass" class="enter_data">Пароль:</label>
+							<input type="text" placeholder="password" name="f_pass" class="input_field" style="margin-left: 12.5%;"> <br>
+							<label for="f_pass" class="enter_data">Повт. пароль:</label>
+							<input type="text" placeholder="repeat password" name="f_pass_check" class="input_field" style="margin-left: 4.1%;">
+							<div>
+								<a style="margin-left: 10%; margin-top: 10%;" href="log_page.html" target="_self">Вже є акаунт</a>
+								<input type="submit" value="Продовжити" id="submit" style="margin-left: 40%;">			
+							</div>
+						</form>
+					</xmp>
+				</div>
+				<div id="pic_div" class="card" style="display: none;">
+					<h2 class="caption">HTML-код зобрадення</h2>		
+					<div class="card" style="background-color: whitesmoke;">
+						<h2>Забезпечити студентів автоматами з усіх предметів</h2>
+						<h5>Опитування розпочалося, 22 вересня, 2022</h5>
+						<div class="poll_desc">
+							<img class="poll_photo" src="../pictures/avtomat.jpg" alt="cardpay" >
+							<div class="desc">
+								<p>Здати залік «автоматом» - значить отримати жадану позначку «зараховано» без усного опитування або виконання всіляких 
+									письмових тестів, тобто «автоматично».</p>
+								<a href="#poll" class="vote">Голосувати</a>	
+							</div>
+						</div>
+					</div>
+					<xmp>
+						<div class="card">
+							<h2>Забезпечити студентів автоматами з усіх предметів</h2>
+							<h5>Опитування розпочалося, 22 вересня, 2022</h5>
+							<div class="poll_desc">
+								<img class="poll_photo" src="../pictures/avtomat.jpg" alt="cardpay" >
+								<div class="desc">
+									<p>Здати залік «автоматом» - значить отримати жадану позначку «зараховано» 
+										без усного опитування або виконання всіляких
+										письмових тестів, тобто «автоматично».</p>
+									<a href="#poll" class="vote">Голосувати</a>	
+								</div>
+							</div>
+						</div>
+					</xmp>
+				</div>
+				<div id="vys_div" class="card" style="display: none;">
+					<h2 class="caption">HTML-код зобрадення</h2>		
+					<p>
+						Виконавши дану лабораторну роботу ми навчилися створювати шаблом сайту (HTML-сторінку).
+						Розміщювати на ній форми, таблиці, зображення, списки, тексти в параграфах и т.п.
+					</p>
+				</div>
+            </div>
+            <div class="lab_left_column">
+                <div class="card lab_links">
+                    <button class="vote b_links" onclick="hideSelector(0)">Опис прелметного середовища</button>
+                    <button class="vote b_links" onclick="hideSelector(1)">Тема Мета Місце розташування лаб1</button>
+                    <button class="vote b_links" onclick="hideSelector(2)">HTML-код таблиць</button>
+                    <button class="vote b_links" onclick="hideSelector(3)">HTML-код форми</button>
+                    <button class="vote b_links" onclick="hideSelector(4)">HTML-код зображення</button>
+                    <button class="vote b_links" onclick="hideSelector(5)">Висновки</button>
+                </div>
+            </div>
+            <script>
+                function hideSelector(num) {
+                    divs = ["opys_div", "tema_div", "table_div", "form_div", "pic_div", "vys_div"];
+                    var x = document.getElementById(divs[num]);                    
+                    x.style.display = "block";
+                    for (let i = 0; i < 6; i++) {
+                        if(i != num){
+                            var y = document.getElementById(divs[i]);
+                                y.style.display = "none";
+                        }                        
+                    }
+                }
+            </script>
+		</main>
+	</body>
